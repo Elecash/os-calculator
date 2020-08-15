@@ -1,13 +1,25 @@
-<h1>How much are you saving with the Open Source projects you're using?</h1>
-<label>
-    Price hour: <input [formControl]="priceHour" type="number" min="0">
-</label>
+<div class="column">
+    <h1>How much are you saving with the Open Source projects you're using?</h1>
+    <div>
+        <label for="priceHour">Price hour:</label>
+        <div class="input-group">
+            <div class="input-symbol">$</div>
+            <input [formControl]="priceHour" id="priceHour" type="number" min="0">
+        </div>
+    </div>
 
-<p>Paste your package.json here:</p>
-<textarea [formControl]="jsonTextArea"></textarea>
+    <div>
+        <label for="jsonTextArea">Paste your package.json here:</label>
+        <textarea [formControl]="jsonTextArea" id="jsonTextArea"></textarea>
+    </div>
+</div>
 
-<h1>You have a total accumulated of {{ starsCount }} Github Stars</h1>
-<h2>You saved approximately {{ totalHours }} weekly hours maintaining these repositories</h2>
-<h2>The total value of those hours is approximately USD$ {{ totalValue | currency }}</h2>
+<div class="column">
+    <h1>Total Github Stars: {{ starsCount | number }} ⭐️</h1>
+    <h2>Saved weekly hours: {{ totalHours | number }} 🕑</h2>
+    <h2>Total hours value: {{ totalValue | currency }} 💸</h2>
+    <h3 *ngIf="missingRepos > 0">We've not been able to calculate the value of {{ missingRepos }} repositories.</h3>
 
-<p>PS: It's probably more...</p>
+    <p *ngIf="totalValue > 0">PS: It's probably more...</p>
+</div>
+

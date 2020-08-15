@@ -4,7 +4,7 @@ import {Subscription} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 
 @Component({
-    selector: 'app-home',
+    selector: 'osc-home',
     templateUrl: 'home.component.html',
     styleUrls: ['home.component.scss']
 })
@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     starsCount = 0;
     totalHours = 0;
     totalValue = 0;
+    missingRepos = 0;
 
     readonly subscriptions: Subscription[] = [];
 
@@ -63,6 +64,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
         this.starsCount = Math.round(pkgsArray.reduce((p, n) => (n.starsCount / n.packages.length) + p, 0));
         this.totalHours = Math.round(pkgsArray.reduce((p, n) => (n.starsCount * (n.score / n.packages.length) / 100) + p, 0));
+        this.missingRepos = responseArray.length - pkgsArray.length;
         this.calculateValue();
     }
 
