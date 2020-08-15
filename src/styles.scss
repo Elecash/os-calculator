@@ -116,3 +116,17 @@ osc-home {
     display: flex;
     justify-content: center;
 }
+
+@media (max-width: 768px) {
+    .column {
+        display: flex;
+        width: auto;
+        margin: 24px 24px 0;
+    }
+
+    osc-home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
