@@ -18,8 +18,9 @@
     <h1>Total Github Stars: {{ starsCount | number }} ⭐️</h1>
     <h2>Saved weekly hours: {{ totalHours | number }} 🕑</h2>
     <h2>Total hours value: {{ totalValue | currency }} 💸</h2>
-    <h3 *ngIf="missingRepos > 0">We've not been able to calculate the value of {{ missingRepos }} repositories.</h3>
 
-    <p *ngIf="totalValue > 0">PS: It's probably more...</p>
+    <div *ngIf="missingRepos > 0">
+        <h3>We've not been able to calculate the value of {{ missingRepos }} repositories.</h3>
+        <p>PS: It's probably more...</p>
+    </div>
 </div>
-
