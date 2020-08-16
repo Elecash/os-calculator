@@ -26,7 +26,7 @@ Licensing models work pretty well for big Open Source projects that are usually 
 There are thousands of small Open Source projects that are being used and nobody knows that they're using it. Still, the developers behind those libraries have to maintain a fragile ecosystem for free and private companies are in risk that those libraries stop being maintained, transferred ownership to potential hackers or worst.
 
 ## What do you suggest?
-I do not have a correct answer here. Maybe a royalty system might be a good idea, but the industry music royalty system has been a failure.
+I do not have a correct answer here. Maybe a royalty system might be a good idea, but the music industry royalty system has been a failure.
 
 ## Are you suggesting that we all should pay for using Open Source projects?
 NO.
