@@ -365,7 +365,7 @@ HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](77, "What do you suggest?");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](78, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](79, "I do not have a correct answer here. Maybe a royalty system might be a good idea, but the industry music royalty system has been a failure.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](79, "I do not have a correct answer here. Maybe a royalty system might be a good idea, but the music industry royalty system has been a failure.");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](80, "h2");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](81, "Are you suggesting that we all should pay for using Open Source projects?");
