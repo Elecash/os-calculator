@@ -95,13 +95,18 @@ input[type='number'] {
     }
 }
 
-.column {
+.card {
     display: flex;
     flex-direction: column;
-    width: 40%;
     padding: 24px;
     background-color: #ffffff;
-    margin-top: 24px;
+    width: 100%;
+    margin: 24px;
+
+}
+
+.column {
+    width: 40%;
 
     &:first-child {
         margin-right: 32px;
@@ -110,11 +115,14 @@ input[type='number'] {
 
 osc-root {
     display: flex;
+    justify-content: center;
 }
 
 osc-home {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1024px;
 }
 
 @media (max-width: 768px) {
@@ -122,6 +130,10 @@ osc-home {
         display: flex;
         width: auto;
         margin: 24px 24px 0;
+
+        &:last-child {
+            margin-bottom: 32px;
+        }
     }
 
     osc-home {

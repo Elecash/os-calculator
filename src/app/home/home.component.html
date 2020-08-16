@@ -1,4 +1,4 @@
-<div class="column">
+<div class="card column">
     <h1>How much are you saving with the Open Source projects you're using?</h1>
     <div>
         <label for="priceHour">Price hour:</label>
@@ -14,7 +14,7 @@
     </div>
 </div>
 
-<div class="column">
+<div class="card column">
     <h1>Total Github Stars: {{ starsCount | number }} ⭐️</h1>
     <h2>Saved weekly hours: {{ totalHours | number }} 🕑</h2>
     <h2>Total hours value: {{ totalValue | currency }} 💸</h2>
@@ -23,4 +23,59 @@
         <h3>We've not been able to calculate the value of {{ missingRepos }} repositories.</h3>
         <p>PS: It's probably more...</p>
     </div>
+</div>
+
+<div class="card">
+    <h2>How do you calculate the value?</h2>
+    <p>We use the excellent <a href="https://api-docs.npms.io/" target="_blank">npms.io API</a> to get a metric about
+        how well
+        maintained is the repository, its code quality and popularity. Then we sum all stars in the repositories you're
+        using and multiply these by npms.io metric. Finally we calculate that for every 100 stars a maintainer spends 1
+        hour per week on the project.</p>
+    <p>For example: <strong>(number of stars️ x npms.io metric / 100) x price hour</strong></p>
+
+    <h2>Why is this interesting?</h2>
+    <p>Every day private companies are trusting more and more in Open Source projects that are not properly maintained
+        due to a lack of financial support.</p>
+    <p>Problems like <a href="http://left-pad.io/" target="_blank">left-pad</a>, <a
+        href="https://www.trendmicro.com/vinfo/dk/security/news/cybercrime-and-digital-threats/hacker-infects-node-js-package-to-steal-from-bitcoin-wallets"
+        target="_blank">event-stream</a>
+        or <a
+            href="https://www.zdnet.com/article/microsoft-spots-malicious-npm-package-stealing-data-from-unix-systems/"
+            target="_blank">1337qq-js</a> are just the tip of the iceberg.</p>
+
+    <h2>Is not sponsoring enough?</h2>
+    <p>Sponsors are <a href="https://staltz.com/software-below-the-poverty-line.html" target="_blank">peanuts</a>.</p>
+    <p>If you pay peanuts, you get monkeys.</p>
+
+    <h2>But Open Source projects can create Licenses to get paid</h2>
+    <p>Licensing models work pretty well for big Open Source projects that are usually behind a company.</p>
+    <p>There are thousands of small Open Source projects that are being used and nobody knows that they're using it.
+        Still, the developers behind those libraries have to maintain a fragile ecosystem for free and private companies
+        are in risk that those libraries stop being maintained, transferred ownership to potential hackers or worst.</p>
+
+    <h2>What do you suggest?</h2>
+    <p>I do not have a correct answer here. Maybe a royalty system might be a good idea, but the industry music royalty
+        system has been a failure.</p>
+
+    <h2>Are you suggesting that we all should pay for using Open Source projects?</h2>
+    <p>NO.</p>
+    <p>I think that companies obtaining an economically benefit by using heavily Open Source projects should compensate
+        economically those projects.</p>
+
+    <h2>Being paid is not against Open Source?</h2>
+    <p>No. There are a lot of Open Source projects that have enterprise models to get a return.</p>
+
+    <h2>Do you hate Open Source?</h2>
+    <p>No. I love Open Source, I've created and contributed to Open Source projects for the last 13 years and I'll keep
+        doing it.</p>
+
+    <h2>It sounds like you hate it</h2>
+    <p>No, really. I love it. <a
+        href="https://www.google.com/search?q=is+open+source+dying&rlz=1C5CHFA_enES913ES913&oq=is+open+source+dying&aqs=chrome..69i57l2j69i60j69i61j69i60l2j69i61l2.2123j0j7&sourceid=chrome&ie=UTF-8"
+        target="_blank">I'm just worried about its future</a>.</p>
+
+    <h2>I have a question, how can I contact you?</h2>
+    <p>You can <a href="https://github.com/elecash/os-calculator/issues" target="_blank">create an issue on this
+        repository</a>.</p>
 </div>
