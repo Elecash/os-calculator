@@ -126,14 +126,17 @@ osc-home {
 }
 
 @media (max-width: 768px) {
-    .column {
-        display: flex;
+    .card {
         width: auto;
         margin: 24px 24px 0;
 
         &:last-child {
-            margin-bottom: 32px;
+            margin-bottom: 24px;
         }
+    }
+
+    .column {
+        display: flex;
     }
 
     osc-home {
