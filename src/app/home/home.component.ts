@@ -2,6 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {Subscription} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
+import {JSONValidator} from '../validators/json-validator';
 
 @Component({
     selector: 'osc-home',
@@ -9,7 +10,7 @@ import {HttpClient} from '@angular/common/http';
     styleUrls: ['home.component.scss']
 })
 export class HomeComponent implements OnInit, OnDestroy {
-    jsonTextArea = new FormControl('');
+    jsonTextArea = new FormControl('', [JSONValidator]);
     priceHour = new FormControl(75);
     starsCount = 0;
     totalHours = 0;
@@ -27,15 +28,37 @@ export class HomeComponent implements OnInit, OnDestroy {
         );
     }
 
+    onKeyDown(evt: KeyboardEvent) {
+        if (evt.key === 'Tab') {
+            evt.preventDefault();
+            const textArea = evt.target as HTMLTextAreaElement;
+            const start = textArea.selectionStart;
+            const end = textArea.selectionEnd;
+            const val = this.jsonTextArea.value;
+            const spaces = '  ';
+
+            this.jsonTextArea.patchValue(val.substring(0, start) + spaces + val.substring(end));
+            textArea.selectionStart = textArea.selectionEnd = start + spaces.length;
+        }
+    }
+
     parsePackage(pkg: string) {
-        const jsonObj = JSON.parse(pkg);
+        let jsonObj;
+        try {
+            jsonObj = JSON.parse(pkg);
+        } catch (error) {
+            return;
+        }
+
         const dependencies = Object.keys(jsonObj.dependencies || {});
         const devDependencies = Object.keys(jsonObj.devDependencies || {});
         const allDependencies = dependencies.concat(devDependencies);
 
-        this.http.post('https://api.npms.io/v2/package/mget', allDependencies).subscribe((resp: any[]) => {
-            this.parseResponse(resp);
-        });
+        if (allDependencies.length > 0) {
+            this.http.post('https://api.npms.io/v2/package/mget', allDependencies).subscribe((resp: any[]) => {
+                this.parseResponse(resp);
+            });
+        }
     }
 
     parseResponse(resp: any[]) {

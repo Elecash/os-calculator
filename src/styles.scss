@@ -49,6 +49,12 @@ textarea {
     border-radius: .25rem;
     position: relative;
     flex: 1 1 0;
+
+    &.ng-dirty.ng-invalid {
+        border-color: #8B0000;
+        outline-color: #8B0000;
+        margin-bottom: 6px;
+    }
 }
 
 input[type='number'] {
@@ -123,6 +129,17 @@ osc-home {
     justify-content: center;
     flex-wrap: wrap;
     max-width: 1024px;
+}
+
+.xkcd {
+    width: 450px;
+    height: auto;
+    margin: 24px auto;
+}
+
+.error-message {
+    color: #8B0000;
+    margin-top: 12px;
 }
 
 @media (max-width: 768px) {

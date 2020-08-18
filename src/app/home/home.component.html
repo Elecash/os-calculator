@@ -10,7 +10,8 @@
 
     <div>
         <label for="jsonTextArea">Paste your package.json here:</label>
-        <textarea [formControl]="jsonTextArea" id="jsonTextArea"></textarea>
+        <textarea [formControl]="jsonTextArea" id="jsonTextArea" (keydown)="onKeyDown($event)"></textarea>
+        <span class="error-message" *ngIf="jsonTextArea.dirty && jsonTextArea.invalid">The package.json is invalid</span>
     </div>
 </div>
 
@@ -82,4 +83,9 @@
     <h2>I have a question, how can I contact you?</h2>
     <p>You can <a href="https://github.com/elecash/os-calculator/issues" target="_blank">create an issue on this
         repository</a>.</p>
+
+    <img src="https://imgs.xkcd.com/comics/dependency.png"
+         class="xkcd"
+         alt="Dependency"
+         title="All modern infrastructure. A project some random person in Nebraska has been thanklessly maintaining since 2003.">
 </div>
