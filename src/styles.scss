@@ -132,7 +132,8 @@ osc-home {
 }
 
 .xkcd {
-    width: 450px;
+    max-width: 450px;
+    width: 100%;
     height: auto;
     margin: 24px auto;
 }
