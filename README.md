@@ -36,11 +36,8 @@ I think that companies obtaining an economic benefit by using heavily Open Sourc
 ## Being paid is not against Open Source?
 No. There are a lot of Open Source projects that have enterprise models to get a return.
 
-## Do you hate Open Source?
-No. I love Open Source, I've created and contributed to Open Source projects for the last 13 years, and I'll keep doing it.
+## Why are you doing this?
+I love Open Source. I've created and contributed to Open Source projects for the last 13 years, and I'll keep doing it. [I'm just worried about its future](https://www.google.com/search?q=is+open+source+dying&rlz=1C5CHFA_enES913ES913&oq=is+open+source+dying&aqs=chrome..69i57l2j69i60j69i61j69i60l2j69i61l2.2123j0j7&sourceid=chrome&ie=UTF-8).
 
-It sounds like you hate it
-No, really. I love it. [I'm just worried about its future](https://www.google.com/search?q=is+open+source+dying&rlz=1C5CHFA_enES913ES913&oq=is+open+source+dying&aqs=chrome..69i57l2j69i60j69i61j69i60l2j69i61l2.2123j0j7&sourceid=chrome&ie=UTF-8).
-
-I have a question, how can I contact you?
+## I have a question, how can I contact you?
 You can [create an issue](https://github.com/elecash/os-calculator/issues) on this repository.
