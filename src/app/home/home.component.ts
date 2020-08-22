@@ -1,8 +1,8 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {FormControl} from '@angular/forms';
-import {Subscription} from 'rxjs';
-import {HttpClient} from '@angular/common/http';
-import {JSONValidator} from '../validators/json-validator';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { Subscription } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { JSONValidator } from '../validators/json-validator';
 
 @Component({
     selector: 'osc-home',
@@ -19,7 +19,8 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     readonly subscriptions: Subscription[] = [];
 
-    constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient) {
+    }
 
     ngOnInit() {
         this.subscriptions.push(
@@ -72,7 +73,7 @@ export class HomeComponent implements OnInit, OnDestroy {
                     organization: organization,
                     starsCount: pkg.collected.github.starsCount,
                     score: pkg.score.final,
-                    packages: [ pkg.collected.metadata.name ]
+                    packages: [pkg.collected.metadata.name]
                 };
             } else {
                 pkgs[organization].packages.push(pkg.collected.metadata.name);

@@ -11,7 +11,8 @@
     <div>
         <label for="jsonTextArea">Paste your package.json here:</label>
         <textarea [formControl]="jsonTextArea" id="jsonTextArea" (keydown)="onKeyDown($event)"></textarea>
-        <span class="error-message" *ngIf="jsonTextArea.dirty && jsonTextArea.invalid">The package.json is invalid</span>
+        <span class="error-message"
+              *ngIf="jsonTextArea.dirty && jsonTextArea.invalid">The package.json is invalid</span>
     </div>
 </div>
 
@@ -74,8 +75,8 @@
     <h2>Why are you doing this?</h2>
     <p>I love Open Source, I've created and contributed to Open Source projects for the last 13 years, and I'll keep
         doing it. <a
-        href="https://www.google.com/search?q=is+open+source+dying&rlz=1C5CHFA_enES913ES913&oq=is+open+source+dying&aqs=chrome..69i57l2j69i60j69i61j69i60l2j69i61l2.2123j0j7&sourceid=chrome&ie=UTF-8"
-        target="_blank">I'm just worried about its future</a>.</p>
+            href="https://www.google.com/search?q=is+open+source+dying&rlz=1C5CHFA_enES913ES913&oq=is+open+source+dying&aqs=chrome..69i57l2j69i60j69i61j69i60l2j69i61l2.2123j0j7&sourceid=chrome&ie=UTF-8"
+            target="_blank">I'm just worried about its future</a>.</p>
 
     <h2>I have a question, how can I contact you?</h2>
     <p>You can <a href="https://github.com/elecash/os-calculator/issues" target="_blank">create an issue on this
