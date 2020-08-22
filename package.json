@@ -6,7 +6,7 @@
         "oscalc": "./lib/index.js"
     },
     "files": [
-        "./lib"
+        "./lib/**"
     ],
     "scripts": {
         "ng": "ng",
