@@ -1,12 +1,12 @@
 {
     "name": "oscalc",
-    "version": "1.0.1",
+    "version": "1.0.5",
     "main": "./lib/index.js",
     "bin": {
         "oscalc": "./lib/index.js"
     },
     "files": [
-        "./lib/**"
+        "lib"
     ],
     "scripts": {
         "ng": "ng",
